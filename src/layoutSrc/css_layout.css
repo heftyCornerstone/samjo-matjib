@@ -1,0 +1,122 @@
+/* 공통 */
+html, body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 120px;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 20px;
+    min-width: 600px;
+    max-width: 60%;
+}
+
+/* 공통 */
+
+/* 네비게이션 */
+.menuNav {
+    position: relative;
+    text-align: center;
+}
+
+.logo {
+    width: 96px;
+    display: block;
+    margin: 0 auto;
+}
+
+.menuUl {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 8em;
+}
+
+.menuLi {
+    font-size: 20px;
+    position: relative;
+    padding: 0.5em 0;
+    color: #7d7d7d;
+    transition: color 0.3s ease;
+}
+
+.menuLi a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menuLi a:hover {
+    color: black;
+}
+
+.menuLi.active a {
+    color: black;
+}
+
+#menuUnderLine {
+    position: absolute;
+    height: 3px;
+    background-color: black;
+    border-radius: 10px;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.hr1 {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.33);
+}
+/* 네비게이션 */
+
+
+/* 콘텐츠 상세 */
+
+/* 콘텐츠 상세*/
+
+
+/* 푸터 */
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #333333;
+    padding: 16px 32px;
+    color: white;
+    margin-top: auto;
+}
+
+.gitCat {
+    width: 32px;
+}
+
+.footerA {
+    color: #F9E33A;
+    text-decoration: none;
+    padding-left: 8px;
+    font-size: 20px;
+}
+/* 푸터 */
