@@ -99,18 +99,19 @@ body {
 
 /* 푸터 */
 .footer {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: left;
     align-items: center;
     background-color: #333333;
-    padding: 16px 32px;
+    padding: 16px 0px 16px 0px;
     color: white;
     margin-top: auto;
 }
 
 .gitCat {
     width: 32px;
+    margin-left: 16px;
 }
 
 .footerA {
