@@ -59,3 +59,10 @@ main{
 label {
     vertical-align: top;
 }
+
+.joinContents>button {
+    background-color: #f9e33a;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
