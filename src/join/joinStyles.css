@@ -1,0 +1,61 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+}
+.joinContents{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+}
+.registrationBoard{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 450px;
+    width: 650;
+    border: 1px solid gray;
+}
+.photoBoard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 250px;
+    background-color: gray;
+    color: white;
+    font-size: bold;
+}
+.infoBoard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shortInfo{
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+.longInfo{
+    /*협업스타일이 속한 div입니다*/
+}
+
+.memberInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+}
+label {
+    vertical-align: top;
+}
