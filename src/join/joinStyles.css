@@ -40,7 +40,7 @@
     align-items: center;
     width: 35%;
     height: 100%;
-    background-color: gray;
+    background-color: #C4C4C4;
     color: white;
 }
 .photoBoard .memberInfo{
@@ -140,4 +140,8 @@ textarea {
     height: 40px;
     border: 1px solid white;
     border-radius: 15px;
+}
+
+.memberAddress {
+    text-align: center;
 }
