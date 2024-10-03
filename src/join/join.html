@@ -1,236 +1,298 @@
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>삼조 맛집</title>
-        <link rel="stylesheet" href="./joinStyles.css">
-        <link rel="stylesheet" href="./styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-            rel="stylesheet">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼조 맛집</title>
+    <link rel="stylesheet" href="./joinStyles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <!-- 네비게이션 -->
-        <header class="navbar">
-            <div>
-                <img class="logo" src="./../images/logo.png" alt="삼조 맛집 로고">
-            </div>
-            <nav class="menuNav">
-                <div id="menuUnderLine"></div>
-                <ul class="menuUl">
-                    <li class="menuLi"><a href="../../index.html">Team</a></li>
-                    <li class="menuLi"><a href="../members/members.html">Members</a></li>
-                    <li class="menuLi"><a href="join.html">Join</a></li>
-                </ul>
-            </nav>
-            <hr class="hr1">
-        </header>
-        <!-- 네비게이션 -->
+  <body>
+    <!-- 네비게이션 -->
+    <header class="navbar">
+      <div>
+        <img class="logo" src="./../images/logo.png" alt="삼조 맛집 로고" />
+      </div>
+      <nav class="menuNav">
+        <div id="menuUnderLine"></div>
+        <ul class="menuUl">
+          <li class="menuLi"><a href="../../index.html">Team</a></li>
+          <li class="menuLi"><a href="../members/members.html">Members</a></li>
+          <li class="menuLi"><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+      <hr class="hr1" />
+    </header>
+    <!-- 네비게이션 -->
 
-        <!-- 콘텐츠 -->
-        <main class="main">
-            <div class="contents">
-                <section class="section">
-                    <div class="joinContents">
-                        <div class="registrationBoard">
-                            <div class="registrationWrapper">
-                                <div class="photoBoard">
-                                    <div class="memberInfo">
-                                        <label class="memberAddress" for="photo">사진 주소</label>
-                                        <input name="photo" id="photo" type="text" placeholder="여기에 작성"/>
-                                    </div>
-                                </div>
-                                <div class="infoBoard">
-                                    <div class="infoBoardWrapper">
-                                        <div class="shortInfo">
-                                            <div class="memberInfo shortInput">
-                                                <label for="name">이름</label>
-                                                <input name="name" id="name" type="text" placeholder="여기에 작성"/>
-                                            </div>
-                
-                                            <div class="memberInfo shortInput">
-                                                <label for="github">github</label>
-                                                <input name="github" id="github" type="text" placeholder="여기에 작성"/>
-                                            </div>
-                                
-                                            <div class="memberInfo shortInput">
-                                                <label for="mbti">MBTI</label>
-                                                <select name="mbti" id="mbti">
-                                                    <option value="ENFP">ENFP</option>
-                                                    <option value="ENFJ">ENFJ</option>
-                                                    <option value="ENTP">ENTP</option>
-                                                    <option value="ENTP">ENTJ</option>
-                                                    <option value="ENTP">ESFP</option>
-                                                    <option value="ENTP">ESFJ</option>
-                                                    <option value="ENTP">ESTP</option>
-                                                    <option value="ENTP">ESTJ</option>
-                                                    <option value="ENTP">INFP</option>
-                                                    <option value="ENTP">INFJ</option>
-                                                    <option value="ENTP">INTP</option>
-                                                    <option value="ENTP">INTJ</option>
-                                                    <option value="ENTP">ISFP</option>
-                                                    <option value="ENTP">ISFJ</option>
-                                                    <option value="ENTP">ISTP</option>
-                                                    <option value="ENTP">ISTJ</option>
-                                                    <!-- 나머지 mbti를 작성해주세요 -->
-                                                </select>
-                                            </div>
-                
-                                            <div class="memberInfo shortInput">
-                                                <label for="blog">blog</label>
-                                                <input name="blog" id="blog" type="text" placeholder="여기에 작성"/>
-                                            </div>
-                                
-                                            <div class="memberInfo shortInput">
-                                                <label for="merit">장점</label>
-                                                <input name="merit" id="merit" type="text" placeholder="여기에 작성"/>
-                                            </div>
-                
-                                            <div class="memberInfo shortInput">
-                                                <label for="pw">비밀번호</label>
-                                                <input name="pw" id="pw" type="text" placeholder="여기에 작성"/>
-                                            </div>
-                                            
-                                            <div class="memberInfo shortInput">
-                                                <label for="favorites">좋아하는 것</label>
-                                                <input name="favorites" id="favorites" type="text" placeholder="여기에 작성"/>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                        <div class="longInfo">
-                                            <div class="memberInfo longInput">
-                                                <label for="coStyle">협업스타일</label>
-                                                <div class="scrollHider">
-                                                    <textarea name="coStyle" id="coStyle" placeholder="여기에 작성"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <button type="button" id="submit" style="width:80px">작성하기</button>
+    <!-- 콘텐츠 -->
+    <main class="main">
+      <div class="contents">
+        <section class="section">
+          <div class="joinContents">
+            <div class="registrationBoard">
+              <div class="registrationWrapper">
+                <div class="photoBoard">
+                  <div class="memberInfo">
+                    <label class="memberAddress" for="photo">사진 주소</label>
+                    <input
+                      name="photo"
+                      id="photo"
+                      type="text"
+                      placeholder="여기에 작성"
+                    />
+                  </div>
+                </div>
+                <div class="infoBoard">
+                  <div class="infoBoardWrapper">
+                    <div class="shortInfo">
+                      <div class="memberInfo shortInput">
+                        <label for="name">이름</label>
+                        <input
+                          name="name"
+                          id="name"
+                          type="text"
+                          placeholder="여기에 작성"
+                        />
+                      </div>
+
+                      <div class="memberInfo shortInput">
+                        <label for="github">github</label>
+                        <input
+                          name="github"
+                          id="github"
+                          type="text"
+                          placeholder="여기에 작성"
+                        />
+                      </div>
+
+                      <div class="memberInfo shortInput">
+                        <label for="mbti">MBTI</label>
+                        <select name="mbti" id="mbti">
+                          <option value="ENFP">ENFP</option>
+                          <option value="ENFJ">ENFJ</option>
+                          <option value="ENTP">ENTP</option>
+                          <option value="ENTP">ENTJ</option>
+                          <option value="ENTP">ESFP</option>
+                          <option value="ENTP">ESFJ</option>
+                          <option value="ENTP">ESTP</option>
+                          <option value="ENTP">ESTJ</option>
+                          <option value="ENTP">INFP</option>
+                          <option value="ENTP">INFJ</option>
+                          <option value="ENTP">INTP</option>
+                          <option value="ENTP">INTJ</option>
+                          <option value="ENTP">ISFP</option>
+                          <option value="ENTP">ISFJ</option>
+                          <option value="ENTP">ISTP</option>
+                          <option value="ENTP">ISTJ</option>
+                          <!-- 나머지 mbti를 작성해주세요 -->
+                        </select>
+                      </div>
+
+                      <div class="memberInfo shortInput">
+                        <label for="blog">blog</label>
+                        <input
+                          name="blog"
+                          id="blog"
+                          type="text"
+                          placeholder="여기에 작성"
+                        />
+                      </div>
+
+                      <div class="memberInfo shortInput">
+                        <label for="merit">장점</label>
+                        <input
+                          name="merit"
+                          id="merit"
+                          type="text"
+                          placeholder="여기에 작성"
+                        />
+                      </div>
+
+                      <div class="memberInfo shortInput">
+                        <label for="pw">비밀번호</label>
+                        <input
+                          name="pw"
+                          id="pw"
+                          type="text"
+                          placeholder="여기에 작성"
+                        />
+                      </div>
+
+                      <div class="memberInfo shortInput">
+                        <label for="favorites">좋아하는 것</label>
+                        <input
+                          name="favorites"
+                          id="favorites"
+                          type="text"
+                          placeholder="여기에 작성"
+                        />
+                      </div>
                     </div>
-                </section>
+
+                    <div class="longInfo">
+                      <div class="memberInfo longInput">
+                        <label for="coStyle">협업스타일</label>
+                        <div class="scrollHider">
+                          <textarea
+                            name="coStyle"
+                            id="coStyle"
+                            placeholder="여기에 작성"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </main>
-        <!-- 콘텐츠 -->
 
-        <!-- 푸터 -->
-        <footer class="footer">
-            <img class="gitCat" src="./../images/git_cat_60^60.png" alt="Github Logo">
-            <a class="footerA" href="https://github.com/heftyCornerstone/samjo-matjib">Team GitHub Link</a>
-        </footer>
-        <!-- 푸터 -->
+            <button type="button" id="submit" style="width: 80px">
+              작성하기
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- 콘텐츠 -->
 
-    </body>
-    <script src="script.js"></script>
-    <script type="module">
-        //----------------------------------------------파이어베이스 초기설정---------------------------------------------------------
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
-        import { getFirestore, collection, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyB5lkGXDo4mwu2p0XxO1DEYVbmYJLkShcQ",
-          authDomain: "samjo-matjib.firebaseapp.com",
-          projectId: "samjo-matjib",
-          storageBucket: "samjo-matjib.appspot.com",
-          messagingSenderId: "664392711771",
-          appId: "1:664392711771:web:543cb6323357fa4797497e",
-          measurementId: "G-S6PG06CBL9"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const db = getFirestore(app);
-        //----------------------------------------------파이어베이스 초기설정---------------------------------------------------------
+    <!-- 푸터 -->
+    <footer class="footer">
+      <img
+        class="gitCat"
+        src="./../images/git_cat_60^60.png"
+        alt="Github Logo"
+      />
+      <a class="footerA" href="https://github.com/heftyCornerstone/samjo-matjib"
+        >Team GitHub Link</a
+      >
+    </footer>
+    <!-- 푸터 -->
+  </body>
+  <script src="script.js"></script>
+  <script type="module">
+    //----------------------------------------------파이어베이스 초기설정---------------------------------------------------------
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+    import {
+      getFirestore,
+      collection,
+      doc,
+      setDoc,
+      getDoc,
+    } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyB5lkGXDo4mwu2p0XxO1DEYVbmYJLkShcQ",
+      authDomain: "samjo-matjib.firebaseapp.com",
+      projectId: "samjo-matjib",
+      storageBucket: "samjo-matjib.appspot.com",
+      messagingSenderId: "664392711771",
+      appId: "1:664392711771:web:543cb6323357fa4797497e",
+      measurementId: "G-S6PG06CBL9",
+    };
 
-        //이벤트 리스너를 추가할 버튼
-        const submitBtn = document.getElementById('submit');
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+    //----------------------------------------------파이어베이스 초기설정---------------------------------------------------------
 
-        //fire store에 새 멤버를 추가
-        async function setMemberData(){
-            const docRef = collection(db, "members");
-            const memberInfo = document.getElementsByClassName('memberInfo');
-            const coWorkStyle = document.getElementById('coStyle');
-            let memberInfoObject = {
-                name:"",
-                photo:"",
-                mbti: "", 
-                merit: "", 
-                favorites: "", 
-                github: "", 
-                blog: "", 
-                pw: "", 
-                coStyle: coWorkStyle.value
-            }
+    //이벤트 리스너를 추가할 버튼
+    const submitBtn = document.getElementById("submit");
 
-            //유저가 작성한 데이터를 memberInfoObject 오브젝트로 옮기기
-            for(let i=0; i<memberInfo.length-1; i++) {
-                const dataName = memberInfo[i].lastElementChild.name;
-                const dataValue = memberInfo[i].lastElementChild.value;
-                memberInfoObject[dataName] = dataValue;
-            }
-            
-            //fire store에 데이터 업로드
-            try {
-                await setDoc(doc(docRef, memberInfoObject["name"]), {
-                    photo: memberInfoObject["photo"],
-                    mbti: memberInfoObject["mbti"], 
-                    merit: memberInfoObject["merit"], 
-                    favorites: memberInfoObject["favorites"], 
-                    github: memberInfoObject["github"], 
-                    blog: memberInfoObject["blog"], 
-                    pw: memberInfoObject["pw"], 
-                    coStyle: memberInfoObject["coStyle"]
-                });
-                alert("멤버 등록이 성공적으로 완료되었습니다.");
+    //fire store에 새 멤버를 추가
+    async function setMemberData() {
+      const docRef = collection(db, "members");
+      const memberInfo = document.getElementsByClassName("memberInfo");
+      const coWorkStyle = document.getElementById("coStyle");
+      let memberInfoObject = {
+        name: "",
+        photo: "",
+        mbti: "",
+        merit: "",
+        favorites: "",
+        github: "",
+        blog: "",
+        pw: "",
+        coStyle: coWorkStyle.value,
+      };
 
-                //alert ok버튼 클릭한 이후 멤버스 페이지로 이동
-                window.location.replace("../members/members.html");
-            } catch (error) {
-                console.error("Error writing document: ", error);
-            }
+      //유저가 작성한 데이터를 memberInfoObject 오브젝트로 옮기기
+      for (let i = 0; i < memberInfo.length - 1; i++) {
+        const dataName = memberInfo[i].lastElementChild.name;
+        const dataValue = memberInfo[i].lastElementChild.value;
+        memberInfoObject[dataName] = dataValue;
+      }
+
+      //fire store에 데이터 업로드
+      try {
+        await setDoc(doc(docRef, memberInfoObject["name"]), {
+          name: memberInfoObject["name"], 
+          photo: memberInfoObject["photo"],
+          mbti: memberInfoObject["mbti"],
+          merit: memberInfoObject["merit"],
+          favorites: memberInfoObject["favorites"],
+          github: memberInfoObject["github"],
+          blog: memberInfoObject["blog"],
+          pw: memberInfoObject["pw"],
+          coStyle: memberInfoObject["coStyle"],
+        });
+        alert("멤버 등록이 성공적으로 완료되었습니다.");
+
+        //alert ok버튼 클릭한 이후 멤버스 페이지로 이동
+        window.location.replace("../members/members.html");
+      } catch (error) {
+        console.error("Error writing document: ", error);
+      }
+    }
+
+    //유저가 입력한 데이터에 빈 칸이 없다면 데이터베이스에 추가한다
+    async function submitMemberData() {
+      const queryList = [
+        "name",
+        "photo",
+        "mbti",
+        "merit",
+        "favorites",
+        "github",
+        "blog",
+        "pw",
+        "coStyle",
+      ];
+      //빈칸 여부 확인하는 변수
+      let isEmpty = false;
+      //빈칸 검사
+      queryList.forEach((c) => {
+        const currentElement = document.getElementById(`${c}`);
+        const currentValue = currentElement.value;
+        const currentName = currentElement.name;
+        //인풋창이 비어있다면 isEmpty를 true로 바꾸고, 스타일을 바꾼다
+        if (!currentValue) {
+          isEmpty = true;
+          currentElement.style.border = "2px solid #b90707";
+          currentElement.setAttribute("placeholder", "빈 칸을 채워주세요");
         }
+      });
 
-        //유저가 입력한 데이터에 빈 칸이 없다면 데이터베이스에 추가한다
-        async function submitMemberData(){
-            const queryList = ['name', 'photo', 'mbti', 'merit', 'favorites', 'github', 'blog', 'pw', 'coStyle'];
-            //빈칸 여부 확인하는 변수
-            let isEmpty = false
-            //빈칸 검사
-            queryList.forEach((c)=>{
-                const currentElement = document.getElementById(`${c}`);
-                const currentValue = currentElement.value;
-                const currentName = currentElement.name;
-                //인풋창이 비어있다면 isEmpty를 true로 바꾸고, 스타일을 바꾼다
-                if(!currentValue) {
-                    isEmpty = true;
-                    currentElement.style.border = "2px solid #b90707"
-                    currentElement.setAttribute('placeholder', '빈 칸을 채워주세요')
-                }
-            })
+      //빈칸이 없다면 데이터 업로드
+      if (!isEmpty) {
+        setMemberData();
+      }
+    }
 
-            //빈칸이 없다면 데이터 업로드
-            if(!isEmpty) {
-                setMemberData();
-            }
-        }
-
-        //버튼에 이벤트 리스너 등록
-        submitBtn.addEventListener("click", submitMemberData);
-    </script>
+    //버튼에 이벤트 리스너 등록
+    submitBtn.addEventListener("click", submitMemberData);
+  </script>
 </html>
