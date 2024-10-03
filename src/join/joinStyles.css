@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     height: 80vh;
-    width: 50vw;
+    width: 55vw;
 }
 .registrationBoard{
     display: flex;
@@ -31,6 +31,8 @@
     height: 100%;
     width: 100%;
 }
+
+/* 조인 카드의 사진 입력란 */
 .photoBoard{
     display: flex;
     flex-direction: column;
@@ -40,8 +42,17 @@
     height: 100%;
     background-color: gray;
     color: white;
-    font-size: bold;
 }
+.photoBoard .memberInfo{
+    display: flex;
+    flex-direction: column;
+    height: 12%;
+}
+.photoBoard .memberInfo input{
+    height: 50%;
+}
+
+/* 조인 카드의 정보 입력란 */
 .infoBoard{
     display: flex;
     justify-content: center;
@@ -55,26 +66,31 @@
     justify-content: space-between;
     align-items: center;
     height: 90%;
-    width: 80%;
+    width: 85%;
     
 }
+/* 정보 입력란의 작은 인풋창들 */
 .shortInfo{
     display: flex;
     position:relative;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 400px;
+    width: 100%;
     height:65%;
 }
 .shortInput{
-    width: 180px;
-    height: 40px;
+    width: 45%;
+    height: 20%;
 }
-.shortInput label {
-    height : 20px;
+.shortInput label{
+    height: 20px;
+}
+.shortInput input, select{
+    height: 50%;
 }
 
+/* 정보 입력란의 큰 textarea */
 .longInfo{
     width: 100%;
     height: 30%;
@@ -87,15 +103,38 @@
     height: 100%;
 }
 
+/* label-textinput 전체에 적용*/
 .memberInfo{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+.memberInfo label{
+    margin-bottom: 5px;
+}
+.memberInfo input, select, textarea{
+    padding: 5px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    outline-color: #f9e33a;
+}
+
+/*label 위치 정렬*/
 label {
     vertical-align: top;
 }
 
+/*placeholder 기본 색상*/
+::placeholder{
+    color: #4F4F4F;
+}
+
+/*textarea resize 없애기*/
+textarea {
+    resize: none;
+}
+
+/* 작성하기 버튼 */
 .joinContents>button {
     background-color: #f9e33a;
     height: 40px;

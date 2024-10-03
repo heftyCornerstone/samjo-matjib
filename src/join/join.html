@@ -30,8 +30,6 @@
         </header>
         <!-- 네비게이션 -->
 
-
-
         <!-- 콘텐츠 -->
         <main class="main">
             <div class="contents">
@@ -41,14 +39,14 @@
                             <div class="registrationWrapper">
                                 <div class="photoBoard">
                                     <div class="memberInfo">
-                                        <label for="photo">사진 링크</label>
+                                        <label for="photo">사진 주소</label>
                                         <input name="photo" id="photo" type="text" placeholder="여기에 작성"/>
                                     </div>
                                 </div>
                                 <div class="infoBoard">
                                     <div class="infoBoardWrapper">
                                         <div class="shortInfo">
-                                            <div class="memberInfo shortInput shortInput">
+                                            <div class="memberInfo shortInput">
                                                 <label for="name">이름</label>
                                                 <input name="name" id="name" type="text" placeholder="여기에 작성"/>
                                             </div>
@@ -120,7 +118,6 @@
             </div>
         </main>
         <!-- 콘텐츠 -->
-
 
         <!-- 푸터 -->
         <footer class="footer">
@@ -220,7 +217,7 @@
                 //인풋창이 비어있다면 isEmpty를 true로 바꾸고, 스타일을 바꾼다
                 if(!currentValue) {
                     isEmpty = true;
-                    currentElement.style.borderColor = "red"
+                    currentElement.style.border = "2px solid #b90707"
                     currentElement.setAttribute('placeholder', '빈 칸을 채워주세요')
                 }
             })
