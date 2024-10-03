@@ -35,76 +35,80 @@
         <!-- 콘텐츠 -->
         <main class="main">
             <div class="contents">
-                <main>
+                <section class="section">
                     <div class="joinContents">
                         <div class="registrationBoard">
-                            <div class="photoBoard">
-                                <div class="memberInfo">
-                                    <label for="photo">사진 링크</label>
-                                    <input name="photo" id="photo" type="text" placeholder="여기에 작성"/>
+                            <div class="registrationWrapper">
+                                <div class="photoBoard">
+                                    <div class="memberInfo">
+                                        <label for="photo">사진 링크</label>
+                                        <input name="photo" id="photo" type="text" placeholder="여기에 작성"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="infoBoard">
-                                <div class="shortInfo">
-                                    <div class="memberInfo">
-                                        <label for="name">이름</label>
-                                        <input name="name" id="name" type="text" placeholder="여기에 작성"/>
-                                    </div>
-        
-                                    <div class="memberInfo">
-                                        <label for="github">github</label>
-                                        <input name="github" id="github" type="text" placeholder="여기에 작성"/>
-                                    </div>
-                        
-                                    <div class="memberInfo">
-                                        <label for="mbti">MBTI</label>
-                                        <select name="mbti" id="mbti">
-                                            <option value="ENFP">ENFP</option>
-                                            <option value="ENFJ">ENFJ</option>
-                                            <option value="ENTP">ENTP</option>
-                                            <option value="ENTP">ENTJ</option>
-                                            <option value="ENTP">ESFP</option>
-                                            <option value="ENTP">ESFJ</option>
-                                            <option value="ENTP">ESTP</option>
-                                            <option value="ENTP">ESTJ</option>
-                                            <option value="ENTP">INFP</option>
-                                            <option value="ENTP">INFJ</option>
-                                            <option value="ENTP">INTP</option>
-                                            <option value="ENTP">INTJ</option>
-                                            <option value="ENTP">ISFP</option>
-                                            <option value="ENTP">ISFJ</option>
-                                            <option value="ENTP">ISTP</option>
-                                            <option value="ENTP">ISTJ</option>
-                                            <!-- 나머지 mbti를 작성해주세요 -->
-                                        </select>
-                                    </div>
-        
-                                    <div class="memberInfo">
-                                        <label for="blog">blog</label>
-                                        <input name="blog" id="blog" type="text" placeholder="여기에 작성"/>
-                                    </div>
-                        
-                                    <div class="memberInfo">
-                                        <label for="merit">장점</label>
-                                        <input name="merit" id="merit" type="text" placeholder="여기에 작성"/>
-                                    </div>
-        
-                                    <div class="memberInfo">
-                                        <label for="pw">비밀번호</label>
-                                        <input name="pw" id="pw" type="text" placeholder="여기에 작성"/>
-                                    </div>
-                                    
-                                    <div class="memberInfo">
-                                        <label for="favorites">좋아하는 것</label>
-                                        <input name="favorites" id="favorites" type="text" placeholder="여기에 작성"/>
-                                    </div>
-                                    
-                                </div>
+                                <div class="infoBoard">
+                                    <div class="infoBoardWrapper">
+                                        <div class="shortInfo">
+                                            <div class="memberInfo shortInput shortInput">
+                                                <label for="name">이름</label>
+                                                <input name="name" id="name" type="text" placeholder="여기에 작성"/>
+                                            </div>
+                
+                                            <div class="memberInfo shortInput">
+                                                <label for="github">github</label>
+                                                <input name="github" id="github" type="text" placeholder="여기에 작성"/>
+                                            </div>
                                 
-                                <div class="longInfo">
-                                    <div class="memberInfo">
-                                        <label for="coStyle">coStyle</label>
-                                        <textarea name="coStyle" id="coStyle" placeholder="여기에 작성"></textarea>
+                                            <div class="memberInfo shortInput">
+                                                <label for="mbti">MBTI</label>
+                                                <select name="mbti" id="mbti">
+                                                    <option value="ENFP">ENFP</option>
+                                                    <option value="ENFJ">ENFJ</option>
+                                                    <option value="ENTP">ENTP</option>
+                                                    <option value="ENTP">ENTJ</option>
+                                                    <option value="ENTP">ESFP</option>
+                                                    <option value="ENTP">ESFJ</option>
+                                                    <option value="ENTP">ESTP</option>
+                                                    <option value="ENTP">ESTJ</option>
+                                                    <option value="ENTP">INFP</option>
+                                                    <option value="ENTP">INFJ</option>
+                                                    <option value="ENTP">INTP</option>
+                                                    <option value="ENTP">INTJ</option>
+                                                    <option value="ENTP">ISFP</option>
+                                                    <option value="ENTP">ISFJ</option>
+                                                    <option value="ENTP">ISTP</option>
+                                                    <option value="ENTP">ISTJ</option>
+                                                    <!-- 나머지 mbti를 작성해주세요 -->
+                                                </select>
+                                            </div>
+                
+                                            <div class="memberInfo shortInput">
+                                                <label for="blog">blog</label>
+                                                <input name="blog" id="blog" type="text" placeholder="여기에 작성"/>
+                                            </div>
+                                
+                                            <div class="memberInfo shortInput">
+                                                <label for="merit">장점</label>
+                                                <input name="merit" id="merit" type="text" placeholder="여기에 작성"/>
+                                            </div>
+                
+                                            <div class="memberInfo shortInput">
+                                                <label for="pw">비밀번호</label>
+                                                <input name="pw" id="pw" type="text" placeholder="여기에 작성"/>
+                                            </div>
+                                            
+                                            <div class="memberInfo shortInput">
+                                                <label for="favorites">좋아하는 것</label>
+                                                <input name="favorites" id="favorites" type="text" placeholder="여기에 작성"/>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="longInfo">
+                                            <div class="memberInfo longInput">
+                                                <label for="coStyle">협업스타일</label>
+                                                <textarea name="coStyle" id="coStyle" placeholder="여기에 작성"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +116,7 @@
         
                         <button type="button" id="submit" style="width:80px">작성하기</button>
                     </div>
-                </main>
+                </section>
             </div>
         </main>
         <!-- 콘텐츠 -->

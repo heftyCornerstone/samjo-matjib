@@ -1,4 +1,4 @@
-main{
+.section{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,53 +8,89 @@ main{
 .joinContents{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 600px;
+    height: 80vh;
+    width: 50vw;
 }
 .registrationBoard{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 450px;
-    width: 650;
-    border: 1px solid gray;
+    justify-content: center;
+    height: 87%;
+    width: 100%;
+    border: 1px solid #EFEFEF;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+}
+.registrationWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
 .photoBoard{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 250px;
+    width: 35%;
+    height: 100%;
     background-color: gray;
     color: white;
     font-size: bold;
 }
 .infoBoard{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 65%;
+    height: 100%;
+}
+.infoBoardWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 80%;
+    
 }
 .shortInfo{
     display: flex;
-    align-items: space-between;
+    position:relative;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 400px;
+    height:65%;
+}
+.shortInput{
+    width: 180px;
+    height: 40px;
+}
+.shortInput label {
+    height : 20px;
 }
 
 .longInfo{
-    /*협업스타일이 속한 div입니다*/
+    width: 100%;
+    height: 30%;
+}
+.longInput{
+    height: 100%;
+}
+#coStyle{
+    width: 100%;
+    height: 100%;
 }
 
 .memberInfo{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 200px;
-    height: 60px;
 }
 label {
     vertical-align: top;
