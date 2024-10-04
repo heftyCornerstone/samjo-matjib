@@ -1,0 +1,217 @@
+/*콘텐츠*/
+
+/* bootstrap 과 기본 css 스타일링 충돌 해결 위함. */
+ul {
+  margin-top: 16px;
+}
+
+body {
+  line-height: normal;
+}
+
+header {
+  display: block !important;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  width: 50%;
+  justify-content: center;
+}
+
+.card {
+  width: auto;
+  margin-bottom: 40px; /* 줄 간격을 위해 아래 여백 추가 */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* 그림자 추가 */
+}
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  /* 사진 사이즈를 일정하게 하고 싶었음 */
+  border-radius: 10px 10px 0 0;
+  /* 사진 윗부분만 뭉툭하게 만들었음 */
+  cursor: pointer;
+}
+
+.textArea {
+  display: flex;
+  justify-content: space-between;
+}
+
+h5 {
+  font-weight: 700;
+}
+
+.deleteBtn {
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  color: red;
+}
+/*콘텐츠*/
+
+/* /////////////////////////////////////////////////////// */
+/* 여기부터 popup창 스타일링입니다요~~ ////////////////////*/
+/* //////////////////////////////////////////////////////// */
+/* 다크 배경 및 팝업 스타일 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* visibility: hidden;  */
+  /* 기본으로 보이지 않게 설정 */
+}
+
+.popup-box {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 0;
+  width: 1000px;
+  border-radius: 16px;
+  height: 500px;
+  position: relative;
+}
+
+.popUpPhoto {
+  height: 100%;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+  /* 사진 윗부분만 뭉툭하게 만들었음 */
+}
+
+.introArea {
+  /* background-color: aqua; */
+  margin: 50px 15px 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.compound {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  gap: 5px;
+}
+
+.popUpTitle {
+  font-size: 16px;
+  color: rgb(152, 152, 152);
+}
+.bold {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.popUpCloseBtn {
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  cursor: pointer;
+}
+
+/* 스크롤바 디자인 */
+.introArea::-webkit-scrollbar {
+  width: 10px;
+}
+.introArea::-webkit-scrollbar-thumb {
+  background-color: #f9e33a;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.introArea::-webkit-scrollbar-track {
+  background-color: rgb(128, 128, 128);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* Members_delete 삭제 모달창 스타일링///////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.modal {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 0;
+  width: 600px;
+  border-radius: 16px;
+  height: 500px;
+  position: relative;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.delete-title {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.delete-description {
+  font-size: 18px;
+}
+.inputArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input-pw {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  border: solid 3px #f9e33a;
+  text-indent: 10px;
+}
+.input-pw:focus {
+  border: solid 3px rgb(62, 62, 248);
+}
+
+.btnArea {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.yellowBtn {
+  font-weight: 700;
+  padding: 15px 40px 15px 40px;
+  background-color: #f9e33a;
+  border: none;
+  border-radius: 10px;
+}
+.cancelBtn {
+  padding: 15px 40px 15px 40px;
+  background-color: #d3d3d2;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result-title {
+  font-size: 30px;
+  font-weight: 700;
+}
