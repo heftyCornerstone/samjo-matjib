@@ -81,127 +81,149 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // 네비게이션
 
-// Firebase SDK 라이브러리 가져오기
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  doc,
-  deleteDoc,
-} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
 
-// Firebase 구성 정보 설정
-const firebaseConfig = {
-  apiKey: "AIzaSyB5lkGXDo4mwu2p0XxO1DEYVbmYJLkShcQ",
-  authDomain: "samjo-matjib.firebaseapp.com",
-  projectId: "samjo-matjib",
-  storageBucket: "samjo-matjib.appspot.com",
-  messagingSenderId: "664392711771",
-  appId: "1:664392711771:web:543cb6323357fa4797497e",
-  measurementId: "G-S6PG06CBL9",
-};
+// // Firebase SDK 라이브러리 가져오기
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+// import {
+//   getFirestore,
+//   collection,
+//   getDocs,
+//   doc,
+//   deleteDoc,
+// } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+// // Firebase 구성 정보 설정
+// const firebaseConfig = {
+//   apiKey: "AIzaSyB5lkGXDo4mwu2p0XxO1DEYVbmYJLkShcQ",
+//   authDomain: "samjo-matjib.firebaseapp.com",
+//   projectId: "samjo-matjib",
+//   storageBucket: "samjo-matjib.appspot.com",
+//   messagingSenderId: "664392711771",
+//   appId: "1:664392711771:web:543cb6323357fa4797497e",
+//   measurementId: "G-S6PG06CBL9",
+// };
 
-async function loadMembers() {
-  // firebase에서 데이터 가져오기
-  let docs = await getDocs(collection(db, "members"));
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const db = getFirestore(app);
 
-  docs.forEach((doc) => {
-    let row = doc.data();
-    let name = row["name"];
-    let photo = row["photo"];
-    let mbti = row["mbti"];
-    let merit = row["merit"];
-    let coStyle = row["coStyle"];
-    let fav = row["favorites"];
-    let blog = row["blog"];
-    let github = row["github"];
-    let pw = row["pw"];
+// async function loadMembers() {
+//   // firebase에서 데이터 가져오기
+//   let docs = await getDocs(collection(db, "members"));
 
-    let position = name === "박산하" ? "팀장" : "팀원"; // 팀장 조건
+//   docs.forEach((docInfo) => {
+//     let row = docInfo.data();
+//     let name = row["name"];
+//     let photo = row["photo"];
+//     let mbti = row["mbti"];
+//     let merit = row["merit"];
+//     let coStyle = row["coStyle"];
+//     let fav = row["favorites"];
+//     let blog = row["blog"];
+//     let github = row["github"];
+//     const pw = row["pw"];
 
-    // HTML 문자열 생성
-    let temp_html = `
-      <div class="col col-md-4">
-        <div class="card">
-          <img src="${photo}" class="card-img-top" alt="${name} 이미지" />
-          <div class="card-body">
-            <div class="textArea">
-              <h5 class="card-name">${name}</h5>
-              <div class="material-symbols-outlined deleteBtn">delete</div>
-            </div>
-            <h7 class="card-position">${position}</h7>
-          </div>
-        </div>
-      </div>`;
+//     let position = name === "박산하" ? "팀장" : "팀원"; // 팀장 조건
 
-    // temp_html 맴카드에 추가하기
-    let card = $(temp_html).appendTo("#memCard");
+//     // HTML 문자열 생성
+//     let temp_html = `
+//       <div class="col col-md-4">
+//         <div class="card">
+//           <img src="${photo}" class="card-img-top" alt="${name} 이미지" />
+//           <div class="card-body">
+//             <div class="textArea">
+//               <h5 class="card-name">${name}</h5>
+//               <div class="material-symbols-outlined deleteBtn">delete</div>
+//             </div>
+//             <h7 class="card-position">${position}</h7>
+//           </div>
+//         </div>
+//       </div>`;
 
-    // 카드 클릭 시 팝업창에 데이터 삽입
-    card.find(".card-img-top").on("click", function () {
-      // 팝업창에 데이터 삽입
-      $(".memName").text(name);
-      $(".popUpPhoto").attr("src", photo);
-      $(".memMbti").text(mbti);
-      $(".memFavorites").text(fav);
-      $(".memGithub").text(github);
-      $(".memBlog").text(blog);
-      $(".memGithub").attr("href", github);
-      $(".memBlog").attr("href", blog);
-      $(".memMerit").text(merit);
-      $(".memStyle").text(coStyle);
+//     // temp_html 맴카드에 추가하기
+//     let card = $(temp_html).appendTo("#memCard");
 
-      // 팝업창 서서히 자연스럽게 보이게하기
-      $("#popUp").fadeIn();
-    });
+//     // 카드 클릭 시 팝업창에 데이터 삽입
+//     card.find(".card-img-top").on("click", function () {
+//       // 팝업창에 데이터 삽입
+//       $(".memName").text(name);
+//       $(".popUpPhoto").attr("src", photo);
+//       $(".memMbti").text(mbti);
+//       $(".memFavorites").text(fav);
+//       $(".memGithub").text(github);
+//       $(".memBlog").text(blog);
+//       $(".memGithub").attr("href", github);
+//       $(".memBlog").attr("href", blog);
+//       $(".memMerit").text(merit);
+//       $(".memStyle").text(coStyle);
 
-    // 닫기 버튼 클릭 시 자연스럽게 팝업창 닫기
-    $(".popUpCloseBtn")
-      .off("click")
-      .on("click", function () {
-        $("#popUp").fadeOut();
-      });
+//       // 팝업창 서서히 자연스럽게 보이게하기
+//       $("#popUp").fadeIn();
+//     });
 
-    async function deleteDocument(docId) {
-  try {
-    // 삭제할 문서의 경로를 정의
-    const docRef = doc(db, "collectionName", docId); // "collectionName"을 실제 컬렉션 이름으로 변경
+//     // 닫기 버튼 클릭 시 자연스럽게 팝업창 닫기
+//     $(".popUpCloseBtn")
+//       .off("click")
+//       .on("click", function () {
+//         $("#popUp").fadeOut();
+//       });
 
-    // 문서 삭제
-    await deleteDoc(docRef);
-    console.log(`문서 ${docId}가 성공적으로 삭제되었습니다.`);
-  } catch (error) {
-    console.error("문서 삭제 중 오류 발생:", error);
-  }
-}
+//     // delete 기능 구현
+//     card.find(".deleteBtn").on("click", async function () {
+//       // 모달을 표시
+//       $("#member-delete").css("display", "flex");
 
-    // delete 기능 구현
-    // card.find(".deleteBtn").on("click", async function () {
-    //   //파이어베이스에서 생선된 문서의 ID
-    //   const docId = doc.id;
-    //   alert("durl");
-    //   let documentRef = doc(db, "members", docId);
+//       // 삭제 확인 모달에서 삭제 버튼 클릭 시
+//       $(".deleteCardBtn").on("click", async function () {
+//         const enteredPassword = $("#password").val(); // 입력한 비밀번호 가져오기
 
-    //   try {
-    //     // Firestore에서 문서 삭제
-    //     await deleteDoc(documentRef);
-    //     alert("Document successfully deleted!");
+//         if (enteredPassword === pw) {
+//           const docId = docInfo.id;
+//           try {
+//             await deleteDoc(doc(db, "members", docId));
 
-    //     // UI에서 카드 제거
-    //     card.remove(); // 해당 카드를 UI에서 제거
-    //   } catch (error) {
-    //     console.error("Error removing document: ", error);
-    //     alert("Error removing document: " + error.message);
-    //   }
-    // });
-  });
-}
+//             card.remove();
 
-// 비동기 함수 호출
-loadMembers().catch(console.error);
-// 호출 시 문제 생기면 에러 확실히 알기 위해 catch 사용함...
+//             // 삭제 성공 모달 표시
+//             $("#member-delete").css("display", "none");
+//             $("#member-failed").css("display", "none");
+//             $("#member-delete-successed").css("display", "flex");
+//           } catch (error) {
+//             console.error("에러메세지: ", error);
+//             alert("카드 삭제에 실패했습니다.");
+//           }
+//         } else {
+//           // 비밀번호가 틀린 경우 실패 모달을 띄움
+//           $("#member-delete-successed").css("display", "none");
+//           $("#member-delete").css("display", "none");
+//           $("#member-delete-failed").css("display", "flex");
+//         }
+//       });
+
+//       // 취소1 버튼을 눌렀을 때 삭제 확인 모달 닫기
+//       $(".cancelBtn1").on("click", function () {
+//         $("#member-delete").css("display", "none");
+//       });
+
+//       // 삭제 성공 모달에서 확인 버튼을 눌렀을 때
+//       $(".okayBtn").on("click", function () {
+//         $("#member-delete-successed").css("display", "none");
+//       });
+
+//       // 삭제 실패 모달에서 다시 입력 버튼을 눌렀을 때
+//       $(".tryAgainBtn").on("click", function () {
+//         $("#member-delete-failed").css("display", "none");
+//         $("#member-delete").css("display", "flex");
+//       });
+
+//       // 실패 모달에서 취소 버튼을 눌렀을 때
+//       $(".cancelBtn2").on("click", function () {
+//         $("#member-delete-failed").css("display", "none");
+//       });
+//     });
+//   });
+// }
+
+// // 비동기 함수 호출
+// loadMembers().catch(console.error);
+// // 호출 시 문제 생기면 에러 확실히 알기 위해 catch 사용함...
