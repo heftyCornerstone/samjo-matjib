@@ -261,3 +261,71 @@ h1:hover {
     font-size: 20px;
 }
 /* 푸터 */
+
+/* 모달창 */
+/* Google Web Font*/
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway',sans-serif; 
+    font-size: 18px;
+    margin: 50px;
+    line-height: 1.5em;
+
+}
+
+a{
+    text-decoration: none;
+}
+/* body -> fontfamily = 대충 글씨체 하나 얹어놈
+
+/* jQuery Fade In Out Modal*/
+
+.modal{ 
+    position :center;
+    background-color: rgba(0,0,0,0.4);
+    top : 0;
+    left: 0;
+    height: 5000px;
+    display: inline-block;
+    width: 100%;
+    display: none;
+}
+.modal-active{
+    display: block;
+}/*액티브로 애니메이션 효과줌*/
+
+.modal-content{
+    background-color: aquamarine; 
+    width: 350px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0,0.15 );
+    text-align:  center;
+    padding: 30px;
+    animation: slidefade 0.35s linear;
+} /*컬러임의작성 */
+.btn-close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+@keyframes slidefade{
+    0%{
+        opacity:0;
+        margin-top: -50px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0%;
+    }
+}

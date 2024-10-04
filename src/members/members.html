@@ -9,6 +9,9 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet">
+            <!-- jQuery CDN --> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
     </head>
 
     <body>
@@ -30,22 +33,43 @@
         <!-- 네비게이션 -->
 
 
-
-        <!-- 콘텐츠 -->
-        <main class="main">
-            <div class="contents">
-                
-            </div>
-        </main>
-        <!-- 콘텐츠 -->
-
-
         <!-- 푸터 -->
         <footer class="footer">
             <img class="gitCat" src="./../images/git_cat_60^60.png" alt="Github Logo">
             <a class="footerA" href="https://github.com/heftyCornerstone/samjo-matjib">Team GitHub Link</a>
         </footer>
         <!-- 푸터 -->
+
+        <a class="modal-notice" hred="#none">Open Fade_In Modal with jQuery</a>
+
+    <div class="modal">
+        <div class="modal-content"> 
+            <a class="btn-close" href="#none">X</a> //닫는 버튼 
+            <h2>Image</h2>
+            <img src="group.png"> /* 임시적으로 그룹.png 파일 입력*/
+
+            <p>
+                /*  Name
+                /* Title
+            </p>
+            <a class="btn-guide" href="#none"></a>
+        </div>
+    </div>
+    <script>
+        
+        $('.modal-notice').click(function(){
+            $('.modal').addClass('active')
+        })
+        $('.modal-notice').click(function(){
+            $('.modal').fadeIn()
+        }) // ()안의 내용은 속도 1000= 1초 
+        $('.btn-close').click(function(){
+            $('.modal').fadeOut()
+        }) //btn close를 누르면 창이 
+        $('.btn-close').click(function(){
+            $('.modal').removeClass('active')
+        })
+    </script>
 
 
     </body>
