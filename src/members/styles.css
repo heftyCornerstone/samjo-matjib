@@ -1,6 +1,14 @@
 /*콘텐츠*/
 
 /* bootstrap 과 기본 css 스타일링 충돌 해결 위함. */
+ul {
+  margin-top: 16px;
+}
+
+body {
+  line-height: normal;
+}
+
 header {
   display: block !important;
 }
