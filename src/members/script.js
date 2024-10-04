@@ -110,8 +110,8 @@ async function loadMembers() {
   // firebase에서 데이터 가져오기
   let docs = await getDocs(collection(db, "members"));
 
-  docs.forEach((doc) => {
-    let row = doc.data();
+  docs.forEach((docInfo) => {
+    let row = docInfo.data();
     let name = row["name"];
     let photo = row["photo"];
     let mbti = row["mbti"];
@@ -120,7 +120,7 @@ async function loadMembers() {
     let fav = row["favorites"];
     let blog = row["blog"];
     let github = row["github"];
-    let pw = row["pw"];
+    const pw = row["pw"];
 
     let position = name === "박산하" ? "팀장" : "팀원"; // 팀장 조건
 
@@ -167,38 +167,59 @@ async function loadMembers() {
         $("#popUp").fadeOut();
       });
 
-    async function deleteDocument(docId) {
-  try {
-    // 삭제할 문서의 경로를 정의
-    const docRef = doc(db, "collectionName", docId); // "collectionName"을 실제 컬렉션 이름으로 변경
-
-    // 문서 삭제
-    await deleteDoc(docRef);
-    console.log(`문서 ${docId}가 성공적으로 삭제되었습니다.`);
-  } catch (error) {
-    console.error("문서 삭제 중 오류 발생:", error);
-  }
-}
-
     // delete 기능 구현
-    // card.find(".deleteBtn").on("click", async function () {
-    //   //파이어베이스에서 생선된 문서의 ID
-    //   const docId = doc.id;
-    //   alert("durl");
-    //   let documentRef = doc(db, "members", docId);
+    card.find(".deleteBtn").on("click", async function () {
+      // 모달을 표시
+      $("#member-delete").css("display", "flex");
 
-    //   try {
-    //     // Firestore에서 문서 삭제
-    //     await deleteDoc(documentRef);
-    //     alert("Document successfully deleted!");
+      // 삭제 확인 모달에서 삭제 버튼 클릭 시
+      $(".deleteCardBtn").on("click", async function () {
+        const enteredPassword = $("#password").val(); // 입력한 비밀번호 가져오기
 
-    //     // UI에서 카드 제거
-    //     card.remove(); // 해당 카드를 UI에서 제거
-    //   } catch (error) {
-    //     console.error("Error removing document: ", error);
-    //     alert("Error removing document: " + error.message);
-    //   }
-    // });
+        if (enteredPassword === pw) {
+          const docId = docInfo.id;
+          try {
+            await deleteDoc(doc(db, "members", docId));
+
+            card.remove();
+
+            // 삭제 성공 모달 표시
+            $("#member-delete").css("display", "none");
+            $("#member-failed").css("display", "none");
+            $("#member-delete-successed").css("display", "flex");
+          } catch (error) {
+            console.error("에러메세지: ", error);
+            alert("카드 삭제에 실패했습니다.");
+          }
+        } else {
+          // 비밀번호가 틀린 경우 실패 모달을 띄움
+          $("#member-delete-successed").css("display", "none");
+          $("#member-delete").css("display", "none");
+          $("#member-delete-failed").css("display", "flex");
+        }
+      });
+
+      // 취소1 버튼을 눌렀을 때 삭제 확인 모달 닫기
+      $(".cancelBtn1").on("click", function () {
+        $("#member-delete").css("display", "none");
+      });
+
+      // 삭제 성공 모달에서 확인 버튼을 눌렀을 때
+      $(".okayBtn").on("click", function () {
+        $("#member-delete-successed").css("display", "none");
+      });
+
+      // 삭제 실패 모달에서 다시 입력 버튼을 눌렀을 때
+      $(".tryAgainBtn").on("click", function () {
+        $("#member-delete-failed").css("display", "none");
+        $("#member-delete").css("display", "flex");
+      });
+
+      // 실패 모달에서 취소 버튼을 눌렀을 때
+      $(".cancelBtn2").on("click", function () {
+        $("#member-delete-failed").css("display", "none");
+      });
+    });
   });
 }
 

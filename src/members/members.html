@@ -100,6 +100,43 @@
         </div>
         <!-- 팝업창 -->
 
+        <!-- 삭제 모달창-->
+        <div class="overlay" id="member-delete" style="display: none;">
+            <div class="modal">
+                <div class="delete-title">정말 삭제하시겠습니까?</div>
+                <div class="delete-description">맴버카드 삭제를 원하시면, 맴버 가입 시 생성했던 본인의 비밀번호를 입력해주시고, 삭제하기 버튼을 눌러주세요.</div>
+                <div class="inputArea">
+                    <div class="pw-name">비밀번호</div>
+                    <input type="password" class="input-pw" placeholder="비밀번호를 입력해주세요." id="password">
+                </div>
+                <div class="btnArea">
+                    <button class="deleteCardBtn yellowBtn">삭제하기</button>
+                    <button class="cancelBtn1 cancelBtn">취소하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="member-delete-successed" style="display: none;">
+            <div class="modal" >
+                <div class="shape">
+                    <div class="result-title">맴버카드가 성공적으로</div>
+                    <div class="result-title">삭제되었습니다!</div>
+                </div>
+                <button class="okayBtn yellowBtn">확인</button>
+            </div>
+        </div>
+        <div class="overlay" id="member-delete-failed"  style="display: none;">
+            <div class="modal">
+                <div class="shape">
+                    <div class="result-title">비밀번호가 틀렸습니다.</div>
+                    <div class="result-title">다시 시도해주세요.</div>
+                </div>
+                <div class="btnArea">
+                    <button class="tryAgainBtn yellowBtn">다시 입력하기</button>
+                    <button class="cancelBtn2 cancelBtn">취소하기</button>
+                </div>
+            </div>
+        </div>
+
         <!-- 푸터 -->
         <footer class="footer">
             <img class="gitCat" src="../images/git_cat_60^60.png" alt="Github Logo">
