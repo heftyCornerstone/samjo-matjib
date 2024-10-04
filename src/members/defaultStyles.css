@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -73,7 +74,6 @@ body {
 
 /* 푸터 */
 .footer {
-  width: 100vw;
   display: flex;
   justify-content: left;
   align-items: center;
