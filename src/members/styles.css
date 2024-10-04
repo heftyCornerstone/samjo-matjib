@@ -1,118 +1,136 @@
-/* 공통 */
-html, body {
-    font-family: "Inter", sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+/*콘텐츠*/
+
+/* bootstrap 과 기본 css 스타일링 충돌 해결 위함. */
+header {
+  display: block !important;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-/* 공통 */
-
-/* 네비게이션 */
-.menuNav {
-    position: relative;
-    text-align: center;
+.container {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  width: 50%;
+  justify-content: center;
 }
 
-.logo {
-    width: 96px;
-    display: block;
-    margin: 0 auto;
+.card {
+  width: auto;
+  margin-bottom: 40px; /* 줄 간격을 위해 아래 여백 추가 */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* 그림자 추가 */
+}
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  /* 사진 사이즈를 일정하게 하고 싶었음 */
+  border-radius: 10px 10px 0 0;
+  /* 사진 윗부분만 뭉툭하게 만들었음 */
+  cursor: pointer;
 }
 
-.menuUl {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    gap: 8em;
+.textArea {
+  display: flex;
+  justify-content: space-between;
 }
 
-.menuLi {
-    font-size: 20px;
-    position: relative;
-    padding: 0.5em 0;
-    color: #7d7d7d;
-    transition: color 0.3s ease;
+h5 {
+  font-weight: 700;
 }
 
-.menuLi a {
-    text-decoration: none;
-    color: inherit; /* 상속된 색상을 사용 */
+.deleteBtn {
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  color: red;
+}
+/*콘텐츠*/
+
+/* /////////////////////////////////////////////////////// */
+/* 여기부터 popup창 스타일링입니다요~~ ////////////////////*/
+/* //////////////////////////////////////////////////////// */
+/* 다크 배경 및 팝업 스타일 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* visibility: hidden;  */
+  /* 기본으로 보이지 않게 설정 */
 }
 
-.menuLi a:hover {
-    color: black;
+.popup-box {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 0;
+  width: 1000px;
+  border-radius: 16px;
+  height: 500px;
+  position: relative;
 }
 
-.menuLi.active a {
-    color: black;
+.popUpPhoto {
+  height: 100%;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+  /* 사진 윗부분만 뭉툭하게 만들었음 */
 }
 
-#menuUnderLine {
-    position: absolute;
-    height: 3px;
-    background-color: black;
-    border-radius: 10px;
-    visibility: hidden;
-    transition: all 0.3s ease;
+.introArea {
+  /* background-color: aqua; */
+  margin: 50px 15px 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
 }
 
-.hr1 {
-    width: 100%;
-    border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.33);
-}
-/* 네비게이션 */
-
-
-/* 콘텐츠 */
-h1 {
-    text-align: center;
-    margin-bottom: 64px;
+.compound {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  gap: 5px;
 }
 
-h1:hover {
-    color: #F9E33A;
+.popUpTitle {
+  font-size: 16px;
+  color: rgb(152, 152, 152);
+}
+.bold {
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 120px;
+.popUpCloseBtn {
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  cursor: pointer;
 }
 
-.contents {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
-    padding: 20px;
-    min-width: 600px;
-    max-width: 60%;
+/* 스크롤바 디자인 */
+.introArea::-webkit-scrollbar {
+  width: 10px;
+}
+.introArea::-webkit-scrollbar-thumb {
+  background-color: #f9e33a;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.introArea::-webkit-scrollbar-track {
+  background-color: rgb(128, 128, 128);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
 }
 
-.teamIntro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 120px;
-}
-
-.teamIntro img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 40px;
-}
 
 .teamIntro a {
     font-size: 18px;
@@ -329,3 +347,4 @@ a{
         margin-top: 0%;
     }
 }
+

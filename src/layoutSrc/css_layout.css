@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: calc(100vw - 8px);
 }
 
 body {
@@ -99,13 +100,11 @@ body {
 
 /* 푸터 */
 .footer {
-    width: 100vw;
     display: flex;
     justify-content: left;
     align-items: center;
     background-color: #333333;
     padding: 16px 0px 16px 0px;
-    color: white;
     margin-top: auto;
 }
 
