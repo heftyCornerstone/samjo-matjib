@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 언더라인 위치 업데이트 함수
     const updateUnderLine = (item) => {
-        const left = item.getBoundingClientRect().left - item.parentElement.getBoundingClientRect().left;
-        const width = item.offsetWidth;
+        const left = item.getBoundingClientRect().left - item.closest('ul').getBoundingClientRect().left;
+        const width = item.getBoundingClientRect().width;
         const itemHeight = item.offsetHeight;
 
         underLine.style.width = `${width}px`;
@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const setActiveMenu = () => {
         const currentPage = window.location.pathname;
 
+        let foundActive = false;
+
         menuItems.forEach(link => {
             const menuItem = link.parentElement;  // <li> 요소
 
@@ -25,18 +27,25 @@ document.addEventListener("DOMContentLoaded", () => {
             if (currentPage.endsWith(link.getAttribute("href"))) {
                 link.classList.add('active');
                 link.style.color = 'black';  // 활성화된 메뉴는 검정색
-                updateUnderLine(menuItem);  // 언더라인 위치 업데이트
+                updateUnderLine(link);  // 언더라인 위치 업데이트
+                foundActive = true;
             } else {
                 link.classList.remove('active');
                 link.style.color = '#7d7d7d';  // 비활성화된 메뉴는 회색
             }
         });
+
+        // 페이지와 일치하는 메뉴가 없을 경우, 기본으로 첫 번째 메뉴 활성화
+        if (!foundActive) {
+            const firstLink = menuItems[0];
+            firstLink.classList.add('active');
+            firstLink.style.color = 'black';  // 첫 메뉴는 검정색
+            updateUnderLine(firstLink);  // 언더라인을 첫 메뉴 밑에 설정
+        }
     };
 
     // 메뉴 클릭 시 언더라인과 색상 업데이트
     menuItems.forEach(link => {
-        const menuItem = link.parentElement;  // <li> 요소
-
         link.addEventListener("click", (e) => {
             e.preventDefault();  // 페이지 이동 중단
 
@@ -49,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // 클릭한 메뉴를 active 상태로 만들고 언더라인 이동
             link.classList.add('active');
             link.style.color = 'black';  // 클릭한 메뉴는 검정색
-            updateUnderLine(menuItem);
+            updateUnderLine(link);
 
             // 페이지 이동
             setTimeout(() => {
@@ -73,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", () => {
         const activeLink = document.querySelector(".menuLi a.active");
         if (activeLink) {
-            updateUnderLine(activeLink.parentElement);
+            updateUnderLine(activeLink);
         }
     });
 });
