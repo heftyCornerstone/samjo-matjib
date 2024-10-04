@@ -318,7 +318,7 @@ a{
 }/*액티브로 애니메이션 효과줌*/
 
 .modal-content{
-    background-color: aquamarine; 
+    background-color: #ffff; 
     width: 350px;
     border-radius: 10px;
     position: absolute;
@@ -331,6 +331,7 @@ a{
     padding: 30px;
     animation: slidefade 0.35s linear;
 } /*컬러임의작성 */
+
 .btn-close{
     position: absolute;
     top: 15px;
