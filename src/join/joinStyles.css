@@ -71,6 +71,7 @@
 }
 /* 정보 입력란의 작은 인풋창들 */
 .shortInfo{
+    font-size: small;
     display: flex;
     position:relative;
     align-items: center;
