@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const itemHeight = item.offsetHeight;
 
         underLine.style.width = `${width}px`;
-        underLine.style.transform = `translate(${left}px, ${itemHeight + 12}px)`; // 언더라인을 텍스트 바로 아래로 이동
+        underLine.style.transform = `translate(${left}px, ${itemHeight}px)`; // 언더라인을 텍스트 바로 아래로 이동
         underLine.style.visibility = 'visible';
     };
 

@@ -15,174 +15,61 @@ body {
 /* 공통 */
 
 /* 네비게이션 */
+.menuNav {
+    position: relative;
+    text-align: center;
+}
+
+.logo {
+    width: 96px;
+    display: block;
+    margin: 0 auto;
+}
+
+.menuUl {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 8em;
+}
+
+.menuLi {
+    font-size: 20px;
+    position: relative;
+    padding: 0.5em 0;
+    color: #7d7d7d;
+    transition: color 0.3s ease;
+}
+
+.menuLi a {
+    text-decoration: none;
+    color: inherit; /* 상속된 색상을 사용 */
+}
+
+.menuLi a:hover {
+    color: black;
+}
+
+.menuLi.active a {
+    color: black;
+}
+
+#menuUnderLine {
+    position: absolute;
+    height: 3px;
+    background-color: black;
+    border-radius: 10px;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.33);
+}
 /* 네비게이션 */
-
-
-/* 콘텐츠 */
-h1 {
-    text-align: center;
-    margin-bottom: 64px;
-}
-
-h1:hover {
-    color: #F9E33A;
-}
-
-.main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 120px;
-}
-
-.contents {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
-    padding: 20px;
-    min-width: 600px;
-    max-width: 60%;
-}
-
-.teamIntro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 120px;
-}
-
-.teamIntro img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 40px;
-}
-
-.teamIntro a {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
-    color: #333;
-}
-
-.teamAbout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 120px;
-}
-
-.teamAboutCards {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.teamAboutCard {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
-    border: rgba(125, 125, 125, 0.2) solid 1px;
-    border-radius: 8px;
-    gap: 20px;
-}
-
-.teamAboutCard:hover {
-    background-color: #f9e33a20;
-}
-
-.teamAboutCard img.icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-}
-
-.teamAboutCard p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-}
-
-.teamAboutCard p strong {
-    color: black;
-}
-
-.teamGoals {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 120px;
-}
-
-.teamGoals img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 32px;
-}
-
-.teamGoals a {
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 10px;
-}
-
-.teamGoals p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #555;
-}
-
-.teamRules {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-}
-
-.teamRulesCard {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
-    border: rgba(125, 125, 125, 0.2) solid 1px;
-    border-radius: 8px;
-    gap: 20px;
-}
-
-.teamRulesCard:hover {
-    background-color: #f9e33a20;
-}
-
-.teamRulesCard img {
-    margin-top: 16px;
-    width: 40px;
-    height: 40px;
-}
-
-.teamRulesCard p {
-    text-align: center;
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    margin-top: -8px;
-}
-
-.teamRulesCard strong {
-    color: black;
-}
-/* 콘텐츠 */
 
 /* 푸터 */
 .footer {
