@@ -7,10 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const updateUnderLine = (item) => {
         const left = item.getBoundingClientRect().left - item.closest('ul').getBoundingClientRect().left;
         const width = item.getBoundingClientRect().width;
-        const itemHeight = item.offsetHeight;
 
         underLine.style.width = `${width}px`;
-        underLine.style.transform = `translate(${left}px, ${itemHeight}px)`; // 언더라인을 텍스트 바로 아래로 이동
+        underLine.style.transform = `translate(${left}px)`; // 언더라인을 텍스트 바로 아래로 이동
         underLine.style.visibility = 'visible';
     };
 

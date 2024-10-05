@@ -1,4 +1,4 @@
-    <html lang="ko"></html>
+<html lang="ko">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,12 +22,14 @@
                 <img class="logo" src="./../images/logo.png" alt="삼조 맛집 로고">
             </div>
             <nav class="menuNav">
-                <div id="menuUnderLine"></div>
-                <ul class="menuUl">
-                    <li class="menuLi"><a href="../../index.html">Team</a></li>
-                    <li class="menuLi"><a href="members.html">Members</a></li>
-                    <li class="menuLi"><a href="./../join/join.html">Join</a></li>
-                </ul>
+                <div class="menuNavInner">
+                    <ul class="menuUl">
+                        <li class="menuLi"><a href="../../index.html">Team</a></li>
+                        <li class="menuLi"><a id='test' href="members.html">Members</a></li>
+                        <li class="menuLi"><a href="./../join/join.html">Join</a></li>
+                    </ul>
+                    <div class="unerLineWrapper"><div id="menuUnderLine"></div></div>
+                </div>
             </nav>
             <hr>
         </header>
@@ -287,11 +289,11 @@
             });
             });
         });
-    }
+        }
 
-    // 비동기 함수 호출
-    loadMembers().catch(console.error);
-    // 호출 시 문제 생기면 에러 확실히 알기 위해 catch 사용함...
+        // 비동기 함수 호출
+        loadMembers().catch(console.error);
+        // 호출 시 문제 생기면 에러 확실히 알기 위해 catch 사용함...
 
     </script>
 </html>
