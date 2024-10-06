@@ -13,6 +13,15 @@ header {
   display: block !important;
 }
 
+hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 1);
+  opacity: 1!important;
+}
+
+
+
 .container {
   display: flex;
   align-items: center;
