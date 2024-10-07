@@ -1,5 +1,4 @@
 # 🍳 Samjo-Matjib 🥘
-# 🍳 Samjo-Matjib 🥘
 
 ## 삼조 맛집
 
