@@ -272,7 +272,7 @@
         "github",
         "blog",
         "pw",
-        "coStyleScrollHider",
+        "coStyle",
       ];
       //빈칸 여부 확인하는 변수
       let isEmpty = false;
@@ -284,7 +284,12 @@
         //인풋창이 비어있다면 isEmpty를 true로 바꾸고, 스타일을 바꾼다
         if (!currentValue) {
           isEmpty = true;
-          currentElement.style.border = "2px solid #b90707";
+          if(coStyle){
+            const coStyleScrollHider = document.getElementById("coStyleScrollHider");
+            coStyleScrollHider.style.border = "2px solid #b90707";
+          } else {
+            currentElement.style.border = "2px solid #b90707";
+          }
           currentElement.setAttribute("placeholder", "빈 칸을 채워주세요");
         }
       });
