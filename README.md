@@ -1,4 +1,4 @@
-# 🍳 Samjo-Matjib 🥘
+![image](https://github.com/user-attachments/assets/32b5b152-af6c-48fc-9be7-f7c783066bf2)# 🍳 Samjo-Matjib 🥘
 
 ## 삼조 맛집
 
@@ -31,7 +31,7 @@
 ![image](https://github.com/user-attachments/assets/735c5e7c-afdf-481b-ad77-6e4b827fb621)
 
 
-![image](https://github.com/user-attachments/assets/77733c40-f61b-4514-b8dd-3cee8bd446a9)
+![image](https://github.com/user-attachments/assets/e86074ea-0e58-4382-8f27-0bcc3811d4d2)
 
 
 ### 3. JOIN
