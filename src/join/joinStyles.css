@@ -99,13 +99,13 @@
 .longInput{
     height: 100%;
 }
-.scrollHider{
+#coStyleScrollHider{
     height: 100%;
     border: 2px solid #BDBDBD;
     border-radius: 5px;
     overflow: hidden;
 }
-.scrollHider:focus-within{
+#coStyleScrollHider:focus-within{
     border-color: #f9e33a;
 }
 #coStyle{
